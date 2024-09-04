@@ -1,6 +1,6 @@
 # Problema-de-Coctel
 **Fecha:** 3 de septiembre de 2024  
-**Autor:** Juan. Julián y Eliana 
+**Autor:** Juan Andres Torres. Julián y Eliana 
 
 ## Descripción
 En este laboratorio, titulado "Problema del cóctel", el objetivo principal es aplicar el análisis en frecuencia de señales de voz para abordar un problema clásico de captura de señales mezcladas. Específicamente, se pretende aislar la voz de interés entre varias fuentes sonoras capturadas por un arreglo de micrófonos, simulando un entorno de "fiesta de cóctel". Este problema es relevante tanto en sistemas de audición humana como artificial, y su resolución es crucial en aplicaciones como el reconocimiento de habla y la cancelación de ruido.
