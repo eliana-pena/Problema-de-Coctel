@@ -7,8 +7,8 @@ Breve descripción del objetivo del laboratorio y los resultados obtenidos.
 
 ## Tabla de Contenidos
 Lista de secciones del informe con enlaces a cada una (opcional pero útil).
-1. [Introducción](##Introducción)
-2. [Metodología](##Metodología)
+1. [Introducción](## Introducción)
+2. [Metodología](##metodología)
 3. [Desarrollo](##Desarrollo)
 4. [Resultados](##Resultados)
 5. [Discusión](##Discusión)
