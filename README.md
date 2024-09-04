@@ -7,15 +7,15 @@ Breve descripción del objetivo del laboratorio y los resultados obtenidos.
 
 ## Tabla de Contenidos
 Lista de secciones del informe con enlaces a cada una (opcional pero útil).
-1. Introducción
-2. Metodología
-3. Desarrollo
-4. Resultados
-5. Discusión
-6. Conclusión
-7. Referencias
-8. Anexos
-
+1. [Introducción](##introducción)
+2. [Metodología](##metodología)
+3. [Desarrollo](##desarrollo)
+4. [Resultados](##resultados)
+5. [Discusión](##discusión)
+6. [Conclusión](##conclusión)
+7. [Referencias](##referencias)
+8. [Anexos](##anexos)
+   
 ## Introducción
 Contexto y relevancia del procesamiento de los audios, o de la señal que ontuvimos.
 Objetivos específicos del laboratorio.
