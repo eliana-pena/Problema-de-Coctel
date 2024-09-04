@@ -3,7 +3,7 @@
 **Autor:** Juan. Julián y Eliana 
 
 ## Descripción
-Breve descripción del objetivo del laboratorio y los resultados obtenidos.
+En este laboratorio, titulado "Problema del cóctel", el objetivo principal es aplicar el análisis en frecuencia de señales de voz para abordar un problema clásico de captura de señales mezcladas. Específicamente, se pretende aislar la voz de interés entre varias fuentes sonoras capturadas por un arreglo de micrófonos, simulando un entorno de "fiesta de cóctel". Este problema es relevante tanto en sistemas de audición humana como artificial, y su resolución es crucial en aplicaciones como el reconocimiento de habla y la cancelación de ruido.
 
 ## Tabla de Contenidos
 Lista de secciones del informe con enlaces a cada una (opcional pero útil).
@@ -17,8 +17,8 @@ Lista de secciones del informe con enlaces a cada una (opcional pero útil).
 8. [Anexos](#anexos)
    
 ## Introducción
-Contexto y relevancia del procesamiento de los audios, o de la señal que ontuvimos.
-Objetivos específicos del laboratorio.
+Configuración del sistema (10%): En la introducción, contextualiza la importancia de la configuración del sistema en el procesamiento de señales. Explica brevemente cómo la disposición de los micrófonos y la configuración de captura afectan la calidad del análisis de señales.
+Objetivos específicos del laboratorio: Asegúrate de incluir objetivos que reflejen la importancia de una configuración rigurosa y la correcta captura de la señal.
 
 ## Metodología
 Descripción de los datos utilizados, como caracteriticas y asi, la fecuacia de como se tomo cuanto fueron donde se tomaron.
