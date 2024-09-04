@@ -16,7 +16,7 @@ Lista de secciones del informe con enlaces a cada una (opcional pero útil).
 7. [Referencias](#referencias)
 8. [Anexos](#anexos)
 
-## sgsg
+##aasllsd
    
 ## Introducción
 Configuración del sistema (10%): En la introducción, contextualiza la importancia de la configuración del sistema en el procesamiento de señales. Explica brevemente cómo la disposición de los micrófonos y la configuración de captura afectan la calidad del análisis de señales.
