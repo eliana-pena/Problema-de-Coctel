@@ -15,11 +15,13 @@ Lista de secciones del informe con enlaces a cada una (opcional pero útil).
 6. [Conclusión](#conclusión)
 7. [Referencias](#referencias)
 8. [Anexos](#anexos)
+
+## sgsg
    
 ## Introducción
 Configuración del sistema (10%): En la introducción, contextualiza la importancia de la configuración del sistema en el procesamiento de señales. Explica brevemente cómo la disposición de los micrófonos y la configuración de captura afectan la calidad del análisis de señales.
 Objetivos específicos del laboratorio: Asegúrate de incluir objetivos que reflejen la importancia de una configuración rigurosa y la correcta captura de la señal.
-
+##gmd
 ## Metodología
 Descripción de los datos utilizados, como caracteriticas y asi, la fecuacia de como se tomo cuanto fueron donde se tomaron.
 Herramientas y librerías de Python empleadas (por ejemplo, NumPy, SciPy, Matplotlib).
