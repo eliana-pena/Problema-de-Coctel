@@ -187,7 +187,10 @@ Análisis de resultados (15%): Presenta y discute los resultados del SNR y otros
 Presentación de los resultados obtenidos: Muestra gráficos, espectrogramas y cualquier otra visualización relevante para interpretar los resultados obtenidos. Explica cómo se relacionan con las expectativas.
 
 # Discusión
-Análisis de los resultados: Reflexiona sobre los resultados obtenidos en relación con las expectativas iniciales. Compara con resultados previos o lo que esperabas obtener, y discute las posibles razones por las que los resultados no fueron los esperados.
+En el siguiente apartado se evidenciará la discusión de los resultados, esto por medio de la interpretación de las gráficas evidenciadas en el índice anterior.
+
+Con respecto a cada uno de los SNR, pudimos evidenciar que la adquisición de la señal de ellos fue la adecuada, esto debido al uso de una habitación insonorizada del exterior, lo que al ser valores positivos mayores a diez esta fue una toma idónea como se evidencia en cada uno de los casos, lo que repercute en poca interferencia para tomar las muestras. Aunque el aspecto de la calidad de pistas de audio, pudo variar por el desfase de las señales correspondientes al factor humano, debido a que las señales tuvieron que ser relativamente similares. Sin embargo, hay una de ellas, que cuenta con periodos de tiempo que afectaron el resultado final.
+Otro valor a considerar que el filtrado logro eliminar la voz de la 3ra persona, por lo que el filtro realizado por ICA, se muestra como una herramienta que puede eliminar frecuencias bajas como en el caso de la persona 3.	
 
 # Conclusión
 Resumen de los hallazgos más importantes: Aquí, resume los aspectos clave discutidos en el informe, incluyendo la efectividad de la configuración del sistema, la calidad de la captura de señal, y la separación de fuentes.
