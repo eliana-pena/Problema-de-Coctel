@@ -63,13 +63,47 @@ Separación de fuentes (10%): Detalla cómo implementaste la separación de fuen
 Código fuente en Python: Explica el código que has utilizado para lograr estos análisis, haciendo énfasis en las partes que corresponden a la captura, el análisis temporal y frecuencial, y la separación de fuentes.
  
 ### Carga de los audios
-Primero, para cargar los archivos existentes, se creó una carpeta que contenía tanto el programa como los audios correspondientes. Luego, en el código se utilizó la librería  `Soundfile`  
+Primero, para cargar los archivos existentes, se creó una carpeta que contenía tanto el programa como los audios correspondientes. Luego, en el código se utilizó la librería  `Soundfile`.  
 Las variables dato se utilizan para almacenar los audios, y Fs nos indica la frecuencia de muestreo de estos.
 ```python
 dato1, Fs = sn.read('audiomass-output (2).wav')
 dato2, Fs2 = sn.read('audiomass-output (3).wav')
 dato3, Fs3 = sn.read('audiomass-output (1).wav')
 ```
+### Análisis temporal y frecuencial  
+
+
+
+
+```python
+# Verificar que las frecuencias de muestreo sean iguales
+if not (Fs == Fs2 == Fs3 == Fs4 == Fs5):
+    raise ValueError("Las frecuencias de muestreo no son iguales. No se puede continuar.")
+
+# Calcular SNR
+def calcular_snr(senal, ruido):
+    potencia_senal = np.mean(senal ** 2)
+    potencia_ruido = np.mean(ruido ** 2)
+    snr = 10 * np.log10(potencia_senal / potencia_ruido)
+    return snr
+
+# SNR para cada micrófono
+snr1 = calcular_snr(dato1, ruido2)
+print(f"La relación señal a ruido (SNR) del micrófono 1 es: {snr1:.2f} dB")
+
+snr2 = calcular_snr(dato2, ruido2)
+print(f"La relación señal a ruido (SNR) del micrófono 2 es: {snr2:.2f} dB")
+
+snr3 = calcular_snr(dato3, ruido2)
+print(f"La relación señal a ruido (SNR) del micrófono 3 es: {snr3:.2f} dB")
+```
+
+
+
+
+
+
+
 
 
 
