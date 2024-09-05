@@ -27,7 +27,7 @@ El siguiente laboratorio presenta el análisis en frecuencias de las señales de
 
 Para el desarrollo de esta problemática, se grabó con 3 micrófonos diferentes por medio de la aplicación Recforge II para seleccionar la frecuencia de muestreo de los 3 micrófonos, teniendo estos una frecuencia de 44 kHz, una vez que los micrófonos capten las pistas de audio, por medio de Python se procederá a sacar un análisis de las señales. 
 
-En el desarrollo del laboratorio se usaron las siguientes librerias:
+En el presente laboratorio se usaron las siguientes librerias:
 
 - **NumPy**: `import numpy as np`  
   Proporciona soporte para arreglos y matrices grandes y multidimensionales, junto con una gran colección de funciones matemáticas para operar sobre estos arreglos.
