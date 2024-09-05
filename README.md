@@ -62,13 +62,12 @@ Separación de fuentes (10%): Detalla cómo implementaste la separación de fuen
 Código fuente en Python: Explica el código que has utilizado para lograr estos análisis, haciendo énfasis en las partes que corresponden a la captura, el análisis temporal y frecuencial, y la separación de fuentes.
  
 ### Carga de los audios
-Primero para cargar los arcivos existentes se creo una carpeta en la que estaban
-
+Primero, para cargar los archivos existentes, se creó una carpeta que contenía tanto el programa como los audios correspondientes. Luego, en el código se utilizó la librería  `Soundfile`  
+Las variables dato se utilizan para almacenar los audios, y Fs nos indica la frecuencia de muestreo de estos.
 ```python
 dato1, Fs = sn.read('audiomass-output (2).wav')
 dato2, Fs2 = sn.read('audiomass-output (3).wav')
 dato3, Fs3 = sn.read('audiomass-output (1).wav')
-
 ```
 
 
