@@ -233,6 +233,9 @@ Otro valor a considerar que el filtrado logro eliminar la voz de la 3ra persona,
 # Conclusión
 En el siguiente apartado se presentarán las conclusiones más relevantes de la anterior practica de laboratorio
 
+Los dos factores que afectaron los resultados en torno a la separacion de las fuentas fue el uso de diferentes microfonos y el factor humano al momento de tomar la toma de las señales. Por lo anterior, se concluye que el uso de disitntos microfonos del mismo tipo y por medio de un riguroso sofware dedicado al procesamiento de audios provenientes de distintas fuentes son unas mejoras que podrian disminuir el error en estas practicas de laboratorio. 
+
+
 En la presente practica del laboratorio se pudo evidenciar como la posición relativa de los micrófonos puede afectar a la toma de datos, esto es debido a que la intensidad captada por el receptor en este caso el micrófono, al estar más cerca de la fuente de sonido, captara con mayor intensidad las vibraciones generadas en el aire, logrando opacar las que no estén en la misma distancia o condicion, esto se puede evidenciar cuando se opaca la voz 3 en el micrófono 1, al ser la voz más alejada, es a su vez la que menos presencia tiene en la pista de audio.
 
 # Referencias
