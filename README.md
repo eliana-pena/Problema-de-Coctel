@@ -256,7 +256,7 @@ Para evaluar la calidad de las señales capturadas, se calculó la SNR de las se
 - Micrófono 3: 49.77 dB
 
 <p align="center">
-   <img src="https://github.com/user-attachments/assets/159f9187-f826-4ad4-97e9-e06bb6e1982d" alt="Descripción de la imagen" width="500">  
+   <img src="https://github.com/user-attachments/assets/776bd5bc-5715-4d09-b250-9f06a54bd333" alt="Descripción de la imagen" width="500">  
 </p>
 
 <p><em>"La imagen muestra las señales capturadas por los tres micrófonos en el dominio de la frecuencia, superpuestas en un único gráfico. Cada señal está representada una señal de sonido oscilatoria que permite observar las diferencias en la amplitud y el comportamiento temporal de las capturas realizadas por cada micrófono."</em></p>
@@ -274,7 +274,7 @@ Se aplicó la técnica FastICA para separar las señales mezcladas provenientes 
 - Señal Separada 3: 76.25 dB
 
 <p align="center">
-   <img src="https://github.com/user-attachments/assets/7c18559a-fd9e-4fb2-ba83-07496d2b3afa" alt="Descripción de la imagen" width="400"> 
+   <img src="https://github.com/user-attachments/assets/0cf28a9a-8180-47a3-88cc-35e125cd2555" alt="Descripción de la imagen" width="400"> 
 </p>
 <p><em>"La imagen muestra las gráficas de las tres señales de voz separadas después de aplicar la técnica FastICA. Cada gráfica representa una señal de sonido oscilatoria, capturada en el dominio temporal."</em></p>
 
