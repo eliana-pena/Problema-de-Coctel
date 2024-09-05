@@ -61,11 +61,6 @@ En el presente laboratorio se usaron las siguientes librerias:
   Proporciona funciones para diseñar y aplicar filtros digitales.
 
 # Desarrollo
-Análisis temporal y frecuencial (15%): Aquí, explica cómo realizaste el análisis en el dominio del tiempo y la frecuencia. Detalla las escalas utilizadas (lineal, logarítmica) y describe cómo estas características se relacionan con el objetivo del experimento.
-Separación de fuentes (10%): Detalla cómo implementaste la separación de fuentes utilizando técnicas como ICA. Explica los resultados obtenidos en términos de claridad de las señales separadas y cómo se puede verificar la efectividad de la separación.
-Código fuente en Python: Explica el código que has utilizado para lograr estos análisis, haciendo énfasis en las partes que corresponden a la captura, el análisis temporal y frecuencial, y la separación de fuentes.
- 
- 
 ### Carga de los audios
 Primero, para cargar los archivos existentes, se creó una carpeta que contenía tanto el programa como los audios correspondientes y para cargarlos al codigo se utilizó la librería  `Soundfile`.  
 Las variables dato se utilizan para almacenar los audios, y Fs nos indica la frecuencia de muestreo de estos.
