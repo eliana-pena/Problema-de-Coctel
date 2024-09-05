@@ -25,9 +25,11 @@ Las grabaciones, realizadas a 44 kHz, presentaron desafíos técnicos como desfa
 
 El siguiente laboratorio presenta el análisis en frecuencias de las señales de voz, esto por medio del problema presentado por la fiesta de coctel, el problema plantea una situación social donde se colocaron varios micrófonos. Sin embargo, se solicita escuchar la voz de uno de los participantes, a pesar de existir diferentes emisores de sonido. En este caso, se colocaron 3 micrófonos que detectarán al mismo tiempo la voz de 3 personas diferentes (los emisores) hablando a la vez como es evidenciado en la imagen. 
 
-![hola soy una descripcion de imagen](https://github.com/user-attachments/assets/6a1b2e81-7455-4301-8034-8252156b9e6d)
-hola soy una descripcion de imagen
-Para el desarrollo de esta problemática, se grabó con 3 micrófonos diferentes por medio de la aplicación Recforge II para seleccionar la frecuencia de muestreo de los 3 micrófonos, teniendo estos una frecuencia de 44 kHz, una vez que los micrófonos capten las pistas de audio, por medio de Python se procederá a sacar un análisis de las señales. 
+![coc2](https://github.com/user-attachments/assets/7445aaac-2087-4dfc-8297-4995274543e2)
+
+Figura 1: Es un diagrama que demuestra la posicion de los emisores y receptores de sonido.
+
+Para el desarrollo de esta problemática, se grabó con 3 micrófonos diferentes por medio de la aplicación Recforge II para seleccionar la frecuencia de muestreo de los 3 micrófonos, teniendo estos una frecuencia de 44 kHz, una vez que los micrófonos capten las pistas de audio, por medio de Python se procederá a sacar un análisis de las señales. Con respecto a la posicion de los elementos seleccionados, cada uno se distancio por 1.16 m de los receptores de sonido, estando cada elemento separado por esa misma distancia
 
 En el presente laboratorio se usaron las siguientes librerias:
 
