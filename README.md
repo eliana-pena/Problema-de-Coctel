@@ -251,8 +251,14 @@ Se aplicó la técnica FastICA para separar las señales mezcladas provenientes 
 Se observa que las señales separadas son más coherentes y limpias en comparación con las señales mezcladas. Aunque se ha logrado una notable reducción de ruido, algunas oscilaciones irregulares aún son visibles, lo que indica que la separación no fue completamente perfecta y persisten componentes de otras fuentes sonoras. Estas irregularidades pueden deberse a la superposición residual de otras voces o ruidos. 
 
 El aumento significativo en la SNR de las señales separadas sugiere una mejora notable en la calidad de las señales obtenidas tras la aplicación de FastICA. La técnica logró reducir el ruido presente en las señales capturadas inicialmente, obteniendo señales separadas con una SNR mucho mayor. Sin embargo, aunque los valores de SNR indican una buena separación en términos de reducción de ruido, es importante considerar otros factores, como la correlación con la señal de referencia, para determinar la fidelidad de la separación.
+### 4. **Audios de las señales separadas**
+Por medio del metodo de separacion de fuente ICA se obtuvieron los siguientes audios:
 
-### 3. **Análisis Espectral y Temporal**
+
+
+
+
+### 4. **Análisis Espectral y Temporal**
 
 Los gráficos temporales y espectrales de las señales capturadas y separadas mostraron diferencias notables. El análisis espectral demostró que las señales separadas presentan una mayor coherencia en el rango de frecuencias esperado para las señales deseadas, lo que sugiere una mejora en la calidad general tras la separación.
 
@@ -279,10 +285,10 @@ La comparación visual de los espectrogramas mostró que, aunque la señal de vo
 
 El espectrograma de la voz de referencia muestra una mayor concentración de energía en ciertas bandas de frecuencia, mientras que las señales separadas presentan una dispersión más amplia de energía, indicando que la separación no fue completamente exitosa. Este fenómeno sugiere que las características del ruido y el solapamiento de las voces dificultaron el proceso de separación.
 
-### 4. **Correlación con la Voz de Referencia**
+### 5. **Correlación con la Voz de Referencia**
 
 Para evaluar cuantitativamente la similitud entre la voz de referencia y una de las señales separadas, se calculó el coeficiente de correlación de Pearson, obteniendo un valor de -0.0020. Este resultado está lejos de los valores esperados cercanos a 1 (o -1 en caso de una relación inversa), lo que indica que la separación no fue efectiva para aislar la voz de referencia y  que todavía contiene componentes de otras fuentes.
-### 5. **Discusión de los Resultados**
+### 6. **Discusión de los Resultados**
 
 Los resultados muestran que, aunque se logró una mejora en la SNR de las señales separadas, la separación completa de la señal deseada no fue lograda. Esto se refleja tanto en la baja correlación como en la presencia de contaminación de otras señales en el análisis espectral. La razón de esto podría estar relacionada con las condiciones de captura de las señales, tales como la disposición de los micrófonos, la calidad de los mismos, o incluso la naturaleza de las señales originales.
 
