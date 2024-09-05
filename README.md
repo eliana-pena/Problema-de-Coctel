@@ -113,6 +113,33 @@ def analisis_temporal_espectral(senal, fs):
     tiempo = np.arange(len(senal)) / fs
     plt.figure(figsize=(14, 5))
 ```
+Graficamos el análisis temporal de la señal usando la libreria `Matplotlib`
+
+```python
+    plt.subplot(1, 2, 1)
+    plt.plot(tiempo, senal)
+    plt.title(f'Análisis Temporal - {titulo}')
+    plt.xlabel('Tiempo [s]')
+    plt.ylabel('Amplitud')
+```
+Para el análisis espectral de frecuencias, se utilizó la Transformada Rápida de Fourier (FFT). Para calcularla se usaron las funciónes `fftfreq` y `fft` de la librería `scipy.fftpack`, asi como la funcion `abs` de `numpy`.
+
+```python
+    freqs = fft.fftfreq(len(senal), 1/fs)
+    fft_senal = np.abs(fft.fft(senal))
+    plt.subplot(1, 2, 2)
+    plt.plot(freqs[:len(freqs)//2], fft_senal[:len(freqs)//2])
+    plt.title(f'Análisis Espectral - {titulo}')
+    plt.xlabel('Frecuencia [Hz]')
+    plt.ylabel('Amplitud')
+
+    plt.tight_layout()
+    plt.show()
+
+analisis_temporal_espectral(dato1, Fs, "Micrófono 1")
+analisis_temporal_espectral(dato2, Fs, "Micrófono 2")
+analisis_temporal_espectral(dato3, Fs, "Micrófono 3")
+```
 
 
 
