@@ -23,9 +23,9 @@ Configuración del sistema (10%): En la introducción, contextualiza la importan
 Objetivos específicos del laboratorio: Asegúrate de incluir objetivos que reflejen la importancia de una configuración rigurosa y la correcta captura de la señal.
 ##gmd
 ## Metodología
-Descripción de los datos utilizados, como caracteriticas y asi, la fecuacia de como se tomo cuanto fueron donde se tomaron.
-Herramientas y librerías de Python empleadas (por ejemplo, NumPy, SciPy, Matplotlib).
-Pasos seguidos en el procesamiento de señales.
+El siguiente laboratorio presenta el análisis en frecuencias de las señales de voz, esto por medio del problema presentado por la fiesta de coctel, el problema plantea una situación social donde se colocaron varios micrófonos. Sin embargo, se solicita escuchar la voz de uno de los participantes, a pesar de existir diferentes emisores de sonido. En este caso, se colocaron 3 micrófonos que detectarán al mismo tiempo la voz de 3 personas diferentes (los emisores) hablando a la vez como es evidenciado en la imagen. 
+
+Para el desarrollo de esta problemática, se grabó con 3 micrófonos diferentes por medio de la aplicación Recforge II para seleccionar la frecuencia de muestreo de los 3 micrófonos, teniendo estos una frecuencia de 44 kHz, una vez que los micrófonos capten las pistas de audio, por medio de Python se procederá a sacar un análisis de las señales. 
 
 ## Desarrollo
 Código fuente en Python ( colocaquemos fragmentos de código relevantes y explicar su función).
