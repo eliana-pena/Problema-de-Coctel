@@ -29,34 +29,35 @@ El siguiente laboratorio presenta el análisis en frecuencias de las señales de
 
 Figura 1: Es un diagrama que demuestra la posicion de los emisores y receptores de sonido.
 
-Para el desarrollo de esta problemática, se grabó con 3 micrófonos diferentes por medio de la aplicación Recforge II para seleccionar la frecuencia de muestreo de los 3 micrófonos, teniendo estos una frecuencia de 44 kHz. Con respecto a la posicion de los elementos seleccionados, cada uno se distancio por 1.16 m de los receptores de sonido, estando cada elemento separado por esa misma distancia, una vez que los micrófonos capten las pistas de audio por medio del lenguaje de programacion Python se procederá a sacar un análisis de las señales, por medio del procesamiento de la señal donde se implementaron varias librerías. 
+**Configuración del sistema**
+La grabación se realizó en una sala insonorizada, con el objetivo de minimizar las interferencias y reflejos de sonido. Se emplearon tres micrófonos de tipo mono, provenientes de diferentes teléfonos móviles, colocados de manera paralela a las fuentes de sonido. Cada fuente de sonido estaba representada por una persona hablando, y la disposición espacial fue la siguiente:
+
+- Persona 3 se encontraba frente al Micrófono 3 a una distancia de 1,16 cm.
+- Persona 1 estaba al lado de Persona 2 a 1,16 cm de distancia, y frente a ella, a 1,16 cm, se encontraba el Micrófono 2.
+- Persona 2 estaba situada al lado de Persona 1, con una distancia de 1,16 cm, y frente a ella, también a 1,16 cm, estaba el Micrófono 1.
+Tanto los micrófonos como las fuentes de sonido fueron alineados de forma paralela, siguiendo las indicaciones del docente, sin tener en cuenta criterios especiales para evitar ecos o reflexiones, debido al acondicionamiento insonorizado de la sala. La orientación de los micrófonos fue directamente hacia las fuentes de sonido, asegurando una captura clara y directa de las voces.
+
+**Captura de la señal**
+Para esta grabación, el sistema de adquisición se utlizo la aplicación movil Recforge II, estuvo conformado por tres micrófonos mono provenientes de teléfonos móviles diferentes. Los micrófonos capturaron las señales de audio de manera individual, sin realizar un ajuste previo en las características técnicas de cada dispositivo, lo que resulta en posibles variaciones entre las respuestas de los micrófonos.
+
+Se configuró la captura de audio con una frecuencia de muestreo de 44KHz, garantizando que se cumpla con el teorema de Nyquist y se capture adecuadamente el rango de frecuencias de las voces humanas. El tiempo de captura fue de aproximademente de 5 segundos, lo que permitió obtener una muestra significativa para el análisis posterior. Aunque el nivel de cuantificación no se ajustó entre los diferentes teléfonos, se espera que el rango dinámico de cada dispositivo haya sido suficiente para evitar saturación o pérdida de información en las señales.
+
+El SNR (relación señal-ruido) inicial de cada grabación fue calculado para verificar la calidad de las señales capturadas. Esta relación es crítica, ya que un SNR bajo podría complicar la separación de fuentes en las etapas posteriores. 
 
 En el presente laboratorio se usaron las siguientes librerias:
 
 - **NumPy**: `import numpy as np`  
-  Proporciona soporte para arreglos y matrices grandes y multidimensionales, junto con una gran colección de funciones matemáticas para operar sobre estos arreglos.
-
 - **SoundFile**: `import soundfile as sf`  
-  Se utiliza para leer y escribir archivos de sonido, como archivos WAV.
-
 - **scikit-learn (FastICA)**: `from sklearn.decomposition import FastICA`  
   Implementa el algoritmo FastICA para el Análisis de Componentes Independientes, una técnica utilizada para separar señales mezcladas.
-
 - **Matplotlib**: `import matplotlib.pyplot as plt`  
-  Una biblioteca de gráficos para crear visualizaciones estáticas, animadas e interactivas en Python.
-
 - **SciPy (FFT)**: `import scipy.fftpack as fft`  
   Proporciona funciones para calcular la Transformada Rápida de Fourier, útil para analizar los componentes de frecuencia de las señales.
-
 - **Librosa**: `import librosa` y `import librosa.display`  
   Un paquete de Python para el análisis de música y audio. Proporciona bloques de construcción para crear sistemas de recuperación de información musical.
-
 - **SciPy (Estadística)**: `from scipy.stats import pearsonr`  
   Se utiliza para calcular los coeficientes de correlación de Pearson.
-
 - **SciPy (IO)**: `from scipy.io import wavfile`  
-  Proporciona funciones para leer y escribir archivos WAV.
-
 - **SciPy (Procesamiento de Señales)**: `from scipy.signal import butter, lfilter`  
   Proporciona funciones para diseñar y aplicar filtros digitales.
 
@@ -139,6 +140,7 @@ analisis_temporal_espectral(dato2, Fs, "Micrófono 2")
 analisis_temporal_espectral(dato3, Fs, "Micrófono 3")
 ```
 ### Separacion de fuentes-ICA
+La separación de fuentes se realizó utilizando el método FastICA (Análisis de Componentes Independientes), con el objetivo de extraer las señales de cada persona hablante a partir de las grabaciones mezcladas obtenidas por los micrófonos. 
 Puesto que una señal tenia mayor longitud con respecto a las otras, se opto por escalonarlas a la misma longitud usando `min_length`.
 
 ```python
