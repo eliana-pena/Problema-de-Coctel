@@ -65,7 +65,7 @@ A continuacion se presenta el desarrollo de objetivo del laboratorio por medio d
 
 ### Carga de los audios
 Primero, para cargar los archivos existentes, se creó una carpeta que contenía tanto el programa como los audios correspondientes y para cargarlos al codigo se utilizó la librería  `Soundfile`.  
-Las variables dato se utilizan para almacenar los audios, y Fs nos indica la frecuencia de muestreo de estos.
+Las variables dato se utilizan para almacenar los audios en un arreglo, y Fs nos indica la frecuencia de muestreo de estos.
 ```python
 #Audios
 
