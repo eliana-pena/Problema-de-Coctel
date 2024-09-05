@@ -140,6 +140,45 @@ analisis_temporal_espectral(dato1, Fs, "Micrófono 1")
 analisis_temporal_espectral(dato2, Fs, "Micrófono 2")
 analisis_temporal_espectral(dato3, Fs, "Micrófono 3")
 ```
+### Separacion de fuentes-ICA
+Puesto que una señal tenia mayor longitud con respecto a las otras, se opto por escalonarlas a la misma longitud usando `min_length`
+
+```python
+min_length = min(len(dato1), len(dato2), len(dato3))
+dato1 = dato1[:min_length]
+dato2 = dato2[:min_length]
+dato3 = dato3[:min_length]
+```
+
+ Se Combinaron las tres señales en una sola matriz.
+```python
+X = np.c_[dato1, dato2, dato3]
+````
+Mediante FastICA de `sklearn.decomposition`, se creó un objeto ICA para separar tres componentes independientes. La función `ica.fit_transform(X)` ajusta el modelo ICA a la matriz de señales X y transforma X en señales separadas, que se almacenan en la matriz `S_`. Esta matriz `S_` tiene el objetivo de convertir las señales separadas a un rango de amplitud adecuado para el formato de audio de 16 bits."
+```python 
+ica = FastICA(n_components=3, random_state=0)
+S_ = ica.fit_transform(X)
+S_ = (S_ / np.max(np.abs(S_))) * 32767
+````
+a traves de la libreria `scipy.io` se generaron los audios separados en al carpeta de origen.
+```python
+wavfile.write("separadita1.wav", Fs, S_[:, 0].astype(np.int16))
+wavfile.write("separadita2.wav", Fs2, S_[:, 1].astype(np.int16))
+wavfile.write("separadita3.wav", Fs2, S_[:, 2].astype(np.int16))
+# Graficar las señales originales, mezcladas y separadas
+````
+Se graficaron las señales mezcladas y separadas.
+```python
+plt.figure()
+plt.subplot(3, 1, 1)
+plt.plot(X)
+plt.title("Señales mezcladas")
+plt.subplot(3, 1, 2)
+plt.plot(S_)
+plt.title("Señales separadas")
+plt.show()
+```
+
 
 
 
