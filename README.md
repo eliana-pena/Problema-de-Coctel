@@ -26,6 +26,47 @@ El siguiente laboratorio presenta el análisis en frecuencias de las señales de
 
 Para el desarrollo de esta problemática, se grabó con 3 micrófonos diferentes por medio de la aplicación Recforge II para seleccionar la frecuencia de muestreo de los 3 micrófonos, teniendo estos una frecuencia de 44 kHz, una vez que los micrófonos capten las pistas de audio, por medio de Python se procederá a sacar un análisis de las señales. 
 
+# Audio Processing Script
+
+This repository contains a Python script for audio processing that utilizes various powerful libraries. Below is a brief overview of the libraries imported in the script:
+
+## Libraries Used
+
+- **NumPy**: `import numpy as np`  
+  Provides support for large, multi-dimensional arrays and matrices, along with a large collection of mathematical functions to operate on these arrays.
+
+- **SoundFile**: `import soundfile as sf`  
+  Used to read and write sound files, such as WAV files.
+
+- **scikit-learn (FastICA)**: `from sklearn.decomposition import FastICA`  
+  Implements the FastICA algorithm for Independent Component Analysis, a technique used to separate mixed signals.
+
+- **Matplotlib**: `import matplotlib.pyplot as plt`  
+  A plotting library for creating static, animated, and interactive visualizations in Python.
+
+- **SciPy (FFT)**: `import scipy.fftpack as fft`  
+  Provides functions for computing the Fast Fourier Transform, which is useful for analyzing the frequency components of signals.
+
+- **Librosa**: `import librosa` and `import librosa.display`  
+  A Python package for music and audio analysis. It provides building blocks to create musical information retrieval systems.
+
+- **SciPy (Stats)**: `from scipy.stats import pearsonr`  
+  Used to calculate Pearson correlation coefficients.
+
+- **SciPy (IO)**: `from scipy.io import wavfile`  
+  Provides functions to read and write WAV files.
+
+- **SciPy (Signal Processing)**: `from scipy.signal import butter, lfilter`  
+  Provides functions for designing and applying digital filters.
+
+## Usage
+
+To use the script, ensure you have the required libraries installed. You can install them using `pip`:
+
+```bash
+pip install numpy soundfile scikit-learn matplotlib scipy librosa
+
+
 ## Desarrollo
 Análisis temporal y frecuencial (15%): Aquí, explica cómo realizaste el análisis en el dominio del tiempo y la frecuencia. Detalla las escalas utilizadas (lineal, logarítmica) y describe cómo estas características se relacionan con el objetivo del experimento.
 Separación de fuentes (10%): Detalla cómo implementaste la separación de fuentes utilizando técnicas como ICA. Explica los resultados obtenidos en términos de claridad de las señales separadas y cómo se puede verificar la efectividad de la separación.
