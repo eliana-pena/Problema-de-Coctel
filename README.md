@@ -214,6 +214,34 @@ correlacion = pearsonr(S_referencia_real, S_T0_real)
 print(f"Coeficiente de correlación: {correlacion[0]:.4f}")
 
 ```
+### Filtro Pasa-banda
+Se le aplico un filtro pasa-banda a la señal resultante del metodo de separacion de fuentes ICA. Se implementaron dos funciones: `butter_bandpass` la cual genera un filtro pasa banda Butterworth y calcula los coeficientes `a` y `b`. La otra funcion es `bandpass_filter` que aplica el filtro pasa banda a una señal de entrada utilizando los coeficientes calculados previamente. Por otro lado, las variables `lowcut` y `highcut` corresponden a las frecuencias de corte inferior y superior para el filtro pasa banda.
+
+```python
+def butter_bandpass(lowcut, highcut, fs, order=5):
+    nyquist = 0.5 * fs
+    low = lowcut / nyquist
+    high = highcut / nyquist
+    b, a = butter(order, [low, high], btype='band')
+    return b, a
+
+def bandpass_filter(data, lowcut, highcut, fs, order=5):
+    b, a = butter_bandpass(lowcut, highcut, fs, order=order)
+    y = lfilter(b, a, data)
+    return y
+
+#definimos los dominios de frecuencia 
+lowcut =3000
+highcut =3200
+
+#aplicamos el filtro
+filtered_audio = bandpass_filter(S_[:, 1].astype(np.int16), lowcut, highcut, Fs, order=6)
+
+# Guardamos la señal filtrada
+filtered_audio_path = 'filtered_audio.wav'
+wavfile.write(filtered_audio_path, Fs, filtered_audio.astype(np.int16))
+```
+
 # Resultados
 El presente análisis se centra en la evaluación de los resultados obtenidos del código de separación de señales mediante la técnica FastICA y su comparación con la calidad esperada en base a los indicadores de SNR y correlación.
 
