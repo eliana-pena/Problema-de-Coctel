@@ -231,9 +231,11 @@ Con respecto a cada uno de los SNR, pudimos evidenciar que la adquisición de la
 Otro valor a considerar que el filtrado logro eliminar la voz de la 3ra persona, por lo que el filtro realizado por ICA, se muestra como una herramienta que puede eliminar frecuencias bajas como en el caso de la persona 3.	
 
 # Conclusión
-En el siguiente apartado se presentarán las conclusiones más relevantes de la anterior practica de laboratorio
 
 Los dos factores que afectaron los resultados en la separación de las fuentes fueron el uso de diferentes micrófonos y el factor humano al momento de capturar las señales.Por lo cual, se concluye que el uso de micrófonos del mismo tipo y la implementación de un software especializado en el procesamiento de audios provenientes de diferentes fuentes son mejoras que podrían reducir el error en este tipo de prácticas de laboratorio.
+
+En la presente practica del laboratorio se pudo evidenciar como la posición relativa de los micrófonos puede afectar a la toma de datos, esto es debido a que la intensidad captada por el receptor en este caso el micrófono, al estar más cerca de la fuente de sonido, captara con mayor intensidad las vibraciones generadas en el aire, logrando opacar las que no estén en la misma distancia o condición, esto se puede evidenciar cuando se opaca la voz 3 en el micrófono 1, al ser la voz más alejada, esa su vez la que menos presencia tiene en la pista de audio
+
 
 # Referencias
 Citas de libros, artículos o recursos en línea utilizados.
