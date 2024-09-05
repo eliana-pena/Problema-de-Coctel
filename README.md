@@ -256,9 +256,11 @@ Por medio del metodo de separacion de fuentes ICA se obtuvo el siguiente resulta
 
 https://github.com/user-attachments/assets/558bcb84-2fbc-4c0b-bf1d-ea2e5286f976
 
-Como se puede percibir en el audio a pesar de eliminar la voz de la tercera persona, aun se alcanza a identificar la voz de dos personas en el audio por lo cual se recurrio al filtrado de esta señal por medio de un filtro pasa banda 
+Como se puede percibir en el audio a pesar de eliminar la voz de la tercera persona, aun se alcanza a identificar la voz de dos personas en el audio, por lo cual se recurrio al filtrado de esta señal por medio de un filtro pasa banda 
 
+https://github.com/user-attachments/assets/5465c212-fc02-4e93-8e8a-e3a4896e3727
 
+En este audio se percibe con mayor claridad la voz de la participante número 1 en comparación con la del participante número 2, sin embargo aun se alcanza a escuchar esta voz.
 
 ### 4. **Análisis Espectral y Temporal**
 
@@ -303,8 +305,8 @@ La comparación cualitativa entre los espectrogramas de la señal de referencia 
 En el siguiente apartado se evidenciará la discusión de los resultados, esto por medio de la interpretación de las gráficas evidenciadas en el índice anterior.
 
 Con respecto a cada uno de los SNR, pudimos evidenciar que la adquisición de la señal de ellos fue la adecuada, esto debido al uso de una habitación insonorizada del exterior, lo que al ser valores positivos mayores a diez esta fue una toma idónea como se evidencia en cada uno de los casos, lo que repercute en poca interferencia para tomar las muestras. Aunque el aspecto de la calidad de pistas de audio, pudo variar por el desfase de las señales correspondientes al factor humano, debido a que las señales tuvieron que ser relativamente similares. Sin embargo, hay una de ellas, que cuenta con periodos de tiempo que afectaron el resultado final.
-Otro valor a considerar que el filtrado logro eliminar la voz de la 3ra persona, por lo que el filtro realizado por ICA, se muestra como una herramienta que puede eliminar frecuencias bajas como en el caso de la persona 3.	
 
+Otro valor a considerar que el filtrado logro eliminar la voz de la 3ra persona, por lo que el filtro realizado por ICA, se muestra como una herramienta que puede eliminar frecuencias bajas como en el caso de la persona 3. Sin embargo, la falta de una separación completa de las voces podría estar relacionada con las características de los micrófonos o con las propias características de las voces. Esto se evidencia en el hecho de que, tras el filtrado, aún se podían escuchar algunas de las voces, aunque una más que la otra. Esto indica que las voces de la persona 2 y la persona 1 probablemente tienen espectros de frecuencia similares. 
 # Conclusión
 
 Los dos factores que afectaron los resultados en la separación de las fuentes fueron el uso de diferentes micrófonos y el factor humano al momento de capturar las señales.Por lo cual, se concluye que el uso de micrófonos del mismo tipo y la implementación de un software especializado en el procesamiento de audios provenientes de diferentes fuentes son mejoras que podrían reducir el error en este tipo de prácticas de laboratorio.
