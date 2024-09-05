@@ -61,6 +61,8 @@ En el presente laboratorio se usaron las siguientes librerias:
   Proporciona funciones para diseñar y aplicar filtros digitales.
 
 # Desarrollo
+A continuacion se presenta el desarrollo de objetivo del laboratorio por medio de herramientas de python: 
+
 ### Carga de los audios
 Primero, para cargar los archivos existentes, se creó una carpeta que contenía tanto el programa como los audios correspondientes y para cargarlos al codigo se utilizó la librería  `Soundfile`.  
 Las variables dato se utilizan para almacenar los audios, y Fs nos indica la frecuencia de muestreo de estos.
