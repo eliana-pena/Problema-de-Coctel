@@ -28,13 +28,9 @@ El siguiente laboratorio presenta el análisis en frecuencias de las señales de
 Para el desarrollo de esta problemática, se grabó con 3 micrófonos diferentes por medio de la aplicación Recforge II para seleccionar la frecuencia de muestreo de los 3 micrófonos, teniendo estos una frecuencia de 44 kHz, una vez que los micrófonos capten las pistas de audio, por medio de Python se procederá a sacar un análisis de las señales. 
 
 ## Desarrollo
-Código fuente en Python ( colocaquemos fragmentos de código relevantes y explicar su función).
-Explicación detallada de cada paso del procesamiento de señales.
-Gráficos y visualizaciones generadas durante el análisis.
-
-## Resultados
-Presentación de los resultados obtenidos.
-Interpretación de los resultados y su relevancia.
+Análisis temporal y frecuencial (15%): Aquí, explica cómo realizaste el análisis en el dominio del tiempo y la frecuencia. Detalla las escalas utilizadas (lineal, logarítmica) y describe cómo estas características se relacionan con el objetivo del experimento.
+Separación de fuentes (10%): Detalla cómo implementaste la separación de fuentes utilizando técnicas como ICA. Explica los resultados obtenidos en términos de claridad de las señales separadas y cómo se puede verificar la efectividad de la separación.
+Código fuente en Python: Explica el código que has utilizado para lograr estos análisis, haciendo énfasis en las partes que corresponden a la captura, el análisis temporal y frecuencial, y la separación de fuentes.
 
 ## Discusión
 Análisis de los resultados. Comparación con expectativas o resultados previos con lo ereales, colocar por que no reulsto como queriamos.
