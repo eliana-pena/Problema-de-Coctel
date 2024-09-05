@@ -69,15 +69,21 @@ Código fuente en Python: Explica el código que has utilizado para lograr estos
 Primero, para cargar los archivos existentes, se creó una carpeta que contenía tanto el programa como los audios correspondientes. Luego, en el código se utilizó la librería  `Soundfile`.  
 Las variables dato se utilizan para almacenar los audios, y Fs nos indica la frecuencia de muestreo de estos.
 ```python
+#Audios
+
 dato1, Fs = sn.read('audiomass-output (2).wav')
 dato2, Fs2 = sn.read('audiomass-output (3).wav')
 dato3, Fs3 = sn.read('audiomass-output (1).wav')
+
+#Ruidos
+
+ruido1, Fs4 = sn.read('Ruido2.wav')
+ruido2, Fs4 = sn.read('Ruido 1 celular 1-corte.wav')
+ruido3, Fs4 = sn.read('r1celular1.wav')
 ```
-### Análisis temporal y frecuencial  
-
-
-
-
+### Calculo del SNR
+Primero se verifico por medio de un condicional que todas las frecuencias de muestreo sean las mismas.
+Para calcular la relación señal-ruido (SNR), se definió una función llamada `calcular_snr`, en la cual se evaluaron los audios junto con sus respectivos ruidos.
 ```python
 # Verificar que las frecuencias de muestreo sean iguales
 if not (Fs == Fs2 == Fs3 == Fs4 == Fs5):
@@ -100,7 +106,6 @@ print(f"La relación señal a ruido (SNR) del micrófono 2 es: {snr2:.2f} dB")
 snr3 = calcular_snr(dato3, ruido2)
 print(f"La relación señal a ruido (SNR) del micrófono 3 es: {snr3:.2f} dB")
 ```
-
 
 
 
