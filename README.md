@@ -65,8 +65,9 @@ Análisis temporal y frecuencial (15%): Aquí, explica cómo realizaste el anál
 Separación de fuentes (10%): Detalla cómo implementaste la separación de fuentes utilizando técnicas como ICA. Explica los resultados obtenidos en términos de claridad de las señales separadas y cómo se puede verificar la efectividad de la separación.
 Código fuente en Python: Explica el código que has utilizado para lograr estos análisis, haciendo énfasis en las partes que corresponden a la captura, el análisis temporal y frecuencial, y la separación de fuentes.
  
+ 
 ### Carga de los audios
-Primero, para cargar los archivos existentes, se creó una carpeta que contenía tanto el programa como los audios correspondientes. Luego, en el código se utilizó la librería  `Soundfile`.  
+Primero, para cargar los archivos existentes, se creó una carpeta que contenía tanto el programa como los audios correspondientes y para cargarlos al codigo se utilizó la librería  `Soundfile`.  
 Las variables dato se utilizan para almacenar los audios, y Fs nos indica la frecuencia de muestreo de estos.
 ```python
 #Audios
@@ -113,7 +114,7 @@ def analisis_temporal_espectral(senal, fs):
     tiempo = np.arange(len(senal)) / fs
     plt.figure(figsize=(14, 5))
 ```
-Graficamos el análisis temporal de la señal usando la libreria `Matplotlib`
+Graficamos el análisis temporal de la señal usando la libreria `Matplotlib`.
 
 ```python
     plt.subplot(1, 2, 1)
@@ -141,7 +142,7 @@ analisis_temporal_espectral(dato2, Fs, "Micrófono 2")
 analisis_temporal_espectral(dato3, Fs, "Micrófono 3")
 ```
 ### Separacion de fuentes-ICA
-Puesto que una señal tenia mayor longitud con respecto a las otras, se opto por escalonarlas a la misma longitud usando `min_length`
+Puesto que una señal tenia mayor longitud con respecto a las otras, se opto por escalonarlas a la misma longitud usando `min_length`.
 
 ```python
 min_length = min(len(dato1), len(dato2), len(dato3))
@@ -154,18 +155,17 @@ dato3 = dato3[:min_length]
 ```python
 X = np.c_[dato1, dato2, dato3]
 ````
-Mediante FastICA de `sklearn.decomposition`, se creó un objeto ICA para separar tres componentes independientes. La función `ica.fit_transform(X)` ajusta el modelo ICA a la matriz de señales X y transforma X en señales separadas, que se almacenan en la matriz `S_`. Esta matriz `S_` tiene el objetivo de convertir las señales separadas a un rango de amplitud adecuado para el formato de audio de 16 bits."
+Mediante FastICA de `sklearn.decomposition`, se creó un objeto ICA para separar tres componentes independientes. La función `ica.fit_transform(X)` ajusta el modelo ICA a la matriz de señales X y transforma X en señales separadas, que se almacenan en la matriz `S_`. Esta matriz `S_` tiene el objetivo de convertir las señales separadas a un rango de amplitud adecuado para el formato de audio de 16 bits.
 ```python 
 ica = FastICA(n_components=3, random_state=0)
 S_ = ica.fit_transform(X)
 S_ = (S_ / np.max(np.abs(S_))) * 32767
 ````
-a traves de la libreria `scipy.io` se generaron los audios separados en al carpeta de origen.
+A traves de la libreria `scipy.io` se generaron los audios separados en al carpeta de origen.
 ```python
 wavfile.write("separadita1.wav", Fs, S_[:, 0].astype(np.int16))
 wavfile.write("separadita2.wav", Fs2, S_[:, 1].astype(np.int16))
 wavfile.write("separadita3.wav", Fs2, S_[:, 2].astype(np.int16))
-# Graficar las señales originales, mezcladas y separadas
 ````
 Se graficaron las señales mezcladas y separadas.
 ```python
@@ -178,6 +178,47 @@ plt.plot(S_)
 plt.title("Señales separadas")
 plt.show()
 ```
+### Comprobación de separación de fuentes
+Para llevar esto a cabo se utilizaron dos señales, una de referencia y una señal separada. En este caso se presentaron los espectros de frecuencia de ambas señales para observar si se presentan diferencias usando la libreria `Librosa`.
+```python
+
+plt.figure(figsize=(10, 6))
+librosa.display.specshow(S_referencia_db, sr=Fs, x_axis='time', y_axis='hz')
+plt.colorbar(format='%+2.0f dB')
+plt.title('Espectrograma - Señal de Referencia')
+plt.show()
+
+# Espectrograma de una de las señales separadas
+S_separada = librosa.stft(S_.T[0])  # Ejemplo con la primera señal separada
+S_separada_db = librosa.amplitude_to_db(np.abs(S_separada), ref=np.max)
+
+plt.figure(figsize=(10, 6))
+librosa.display.specshow(S_separada_db, sr=Fs, x_axis='time', y_axis='hz')
+plt.colorbar(format='%+2.0f dB')
+plt.title('Espectrograma - Señal Separada 1')
+plt.show()
+
+```
+Calculamos el coeficiente de correlación de Pearson para medir la similitud entre la señal de referencia y una de las señales separadas obtenidas por ICA a traves de la libreria `scipy.stats`. Para que esto se llevara a cabo fue necesario calcular las señales en las dimensiones adecuadas.
+```python
+# Obtén la longitud mínima entre las dos señales
+min_length = min(len(S_referencia.flatten()), len(S_.T[2].flatten()))
+
+# Recorta la señal de referencia a la longitud mínima
+S_referencia_flat = S_referencia.flatten()[:min_length]
+S_T0_flat = S_.T[2].flatten()
+
+# Convierte las señales a sus partes reales
+S_referencia_real = S_referencia_flat.real
+S_T0_real = S_T0_flat.real
+
+# Calcula la correlación
+correlacion = pearsonr(S_referencia_real, S_T0_real)
+print(f"Coeficiente de correlación: {correlacion[0]:.4f}")
+
+```
+
+
 
 
 
