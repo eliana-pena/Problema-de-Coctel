@@ -252,7 +252,9 @@ Se observa que las señales separadas son más coherentes y limpias en comparaci
 
 El aumento significativo en la SNR de las señales separadas sugiere una mejora notable en la calidad de las señales obtenidas tras la aplicación de FastICA. La técnica logró reducir el ruido presente en las señales capturadas inicialmente, obteniendo señales separadas con una SNR mucho mayor. Sin embargo, aunque los valores de SNR indican una buena separación en términos de reducción de ruido, es importante considerar otros factores, como la correlación con la señal de referencia, para determinar la fidelidad de la separación.
 ### 4. **Audios de las señales separadas**
-Por medio del metodo de separacion de fuente ICA se obtuvieron los siguientes audios:
+Por medio del metodo de separacion de fuentes ICA se obtuvo el siguiente resultado
+https://github.com/user-attachments/assets/558bcb84-2fbc-4c0b-bf1d-ea2e5286f976
+Como se puede percibir en el audio a pesar de eliminar la voz de la tercera persona, aun se alcanza a identificar la voz de dos personas en el audio por lo cual se recurrio al filtrado de esta señal por medio de un filtro pasa banda 
 
 
 
