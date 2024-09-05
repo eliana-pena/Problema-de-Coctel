@@ -106,12 +106,13 @@ print(f"La relación señal a ruido (SNR) del micrófono 2 es: {snr2:.2f} dB")
 snr3 = calcular_snr(dato3, ruido2)
 print(f"La relación señal a ruido (SNR) del micrófono 3 es: {snr3:.2f} dB")
 ```
-
-
-
-
-
-
+### Análisis temporal y espectral
+Para el análisis temporal, se definió la función `analisis_temporal_espectral`. En esta función, `senal` representa la señal de audio que se va a analizar, y `fs` es la frecuencia de muestreo de la señal expresada en Hz.
+```python
+def analisis_temporal_espectral(senal, fs):
+    tiempo = np.arange(len(senal)) / fs
+    plt.figure(figsize=(14, 5))
+```
 
 
 
