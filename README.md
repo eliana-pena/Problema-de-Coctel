@@ -29,7 +29,7 @@ El siguiente laboratorio presenta el análisis en frecuencias de las señales de
 
 Figura 1: Es un diagrama que demuestra la posicion de los emisores y receptores de sonido.
 
-Para el desarrollo de esta problemática, se grabó con 3 micrófonos diferentes por medio de la aplicación Recforge II para seleccionar la frecuencia de muestreo de los 3 micrófonos, teniendo estos una frecuencia de 44 kHz. Con respecto a la posicion de los elementos seleccionados, cada uno se distancio por 1.16 m de los receptores de sonido, estando cada elemento separado por esa misma distancia, una vez que los micrófonos capten las pistas de audio por medio del lenguaje de programacion Python se procederá a sacar un análisis de las señales por medio del procesamiento de la señal donde se implementaron varias librerías. 
+Para el desarrollo de esta problemática, se grabó con 3 micrófonos diferentes por medio de la aplicación Recforge II para seleccionar la frecuencia de muestreo de los 3 micrófonos, teniendo estos una frecuencia de 44 kHz. Con respecto a la posicion de los elementos seleccionados, cada uno se distancio por 1.16 m de los receptores de sonido, estando cada elemento separado por esa misma distancia, una vez que los micrófonos capten las pistas de audio por medio del lenguaje de programacion Python se procederá a sacar un análisis de las señales, por medio del procesamiento de la señal donde se implementaron varias librerías. 
 
 En el presente laboratorio se usaron las siguientes librerias:
 
