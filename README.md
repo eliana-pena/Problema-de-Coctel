@@ -288,9 +288,9 @@ https://github.com/user-attachments/assets/558bcb84-2fbc-4c0b-bf1d-ea2e5286f976
 
 Como se puede percibir en el audio a pesar de eliminar la voz de la tercera persona, aun se alcanza a identificar la voz de dos personas en el audio, por lo cual se recurrio al filtrado de esta señal por medio de un filtro pasa banda 
 
-https://github.com/user-attachments/assets/3ceb9d88-5861-462b-8fce-bc2600ff7b65
+[https://github.com/user-attachments/assets/3ceb9d88-5861-462b-8fce-bc2600ff7b65](https://github.com/user-attachments/assets/69891a74-0337-4938-97d9-57983da6a231)
 
-En este audio se percibe con mayor claridad la voz de la participante número 2 en comparación con la del participante número 1, sin embargo aun se alcanza a escuchar esta voz.
+En este audio se percibe con mayor claridad la voz de la participante número 1 en comparación con la del participante número 2, sin embargo aun se alcanza a escuchar esta voz.
 
 ### 4. **Análisis Espectral y Temporal**
 
