@@ -214,15 +214,82 @@ correlacion = pearsonr(S_referencia_real, S_T0_real)
 print(f"Coeficiente de correlación: {correlacion[0]:.4f}")
 
 ```
-
-
-
-
-
-
 # Resultados
-Análisis de resultados (15%): Presenta y discute los resultados del SNR y otros indicadores de calidad de las señales separadas. Relaciona estos resultados con la calidad de la captura de señal y la configuración del sistema descritos anteriormente.
-Presentación de los resultados obtenidos: Muestra gráficos, espectrogramas y cualquier otra visualización relevante para interpretar los resultados obtenidos. Explica cómo se relacionan con las expectativas.
+El presente análisis se centra en la evaluación de los resultados obtenidos del código de separación de señales mediante la técnica FastICA y su comparación con la calidad esperada en base a los indicadores de SNR y correlación.
+
+### 1. **Relación Señal a Ruido (SNR)**
+
+Para evaluar la calidad de las señales capturadas, se calculó la SNR de las señales provenientes de tres micrófonos:
+
+- Micrófono 1: 34.88 dB
+- Micrófono 2: 26.54 dB
+- Micrófono 3: 49.77 dB
+
+<p align="center">
+   <img src="https://github.com/user-attachments/assets/159f9187-f826-4ad4-97e9-e06bb6e1982d" alt="Descripción de la imagen" width="500">  
+</p>
+
+<p><em>"La imagen muestra las señales capturadas por los tres micrófonos en el dominio de la frecuencia, superpuestas en un único gráfico. Cada señal está representada una señal de sonido oscilatoria que permite observar las diferencias en la amplitud y el comportamiento temporal de las capturas realizadas por cada micrófono."</em></p>
+
+Las diferencias en la amplitud de las señales son indicativas de variaciones en la calidad de la captura, probablemente debidas a la presencia de ruido. Visualmente, se puede observar que la señal del micrófono 3 tiene una mayor amplitud y menos fluctuaciones, lo que coincide con el mayor valor de SNR reportado (49.77 dB), indicando que capturó una señal más limpia. En cambio, las señales de los micrófonos 1 y 2 presentan más irregularidades, lo que refleja la presencia de más ruido en sus capturas, especialmente en el caso del micrófono 2, que tiene el valor de SNR más bajo (26.54 dB).
+
+Estos resultados muestran una variación considerable en la SNR de cada micrófono, lo que sugiere diferencias en la calidad de captura. El micrófono 3 ofrece la mayor SNR (49.77 dB), lo que indica que la señal capturada por este dispositivo contiene menos ruido en comparación con los otros. En contraste, el micrófono 2 tiene una SNR más baja (26.54 dB), lo que sugiere una mayor presencia de ruido. Estas diferencias pueden estar asociadas a factores como la ubicación de los micrófonos o la sensibilidad de cada dispositivo.
+
+### 2. **Calidad de las Señales Separadas**
+
+Se aplicó la técnica FastICA para separar las señales mezcladas provenientes de los micrófonos. Los valores de SNR de las señales separadas fueron los siguientes:
+
+- Señal Separada 1: 76.25 dB
+- Señal Separada 2: 76.25 dB
+- Señal Separada 3: 76.25 dB
+
+<p align="center">
+   <img src="https://github.com/user-attachments/assets/7c18559a-fd9e-4fb2-ba83-07496d2b3afa" alt="Descripción de la imagen" width="400"> 
+</p>
+<p><em>"La imagen muestra las gráficas de las tres señales de voz separadas después de aplicar la técnica FastICA. Cada gráfica representa una señal de sonido oscilatoria, capturada en el dominio temporal."</em></p>
+
+Se observa que las señales separadas son más coherentes y limpias en comparación con las señales mezcladas. Aunque se ha logrado una notable reducción de ruido, algunas oscilaciones irregulares aún son visibles, lo que indica que la separación no fue completamente perfecta y persisten componentes de otras fuentes sonoras. Estas irregularidades pueden deberse a la superposición residual de otras voces o ruidos. 
+
+El aumento significativo en la SNR de las señales separadas sugiere una mejora notable en la calidad de las señales obtenidas tras la aplicación de FastICA. La técnica logró reducir el ruido presente en las señales capturadas inicialmente, obteniendo señales separadas con una SNR mucho mayor. Sin embargo, aunque los valores de SNR indican una buena separación en términos de reducción de ruido, es importante considerar otros factores, como la correlación con la señal de referencia, para determinar la fidelidad de la separación.
+
+### 3. **Análisis Espectral y Temporal**
+
+Los gráficos temporales y espectrales de las señales capturadas y separadas mostraron diferencias notables. El análisis espectral demostró que las señales separadas presentan una mayor coherencia en el rango de frecuencias esperado para las señales deseadas, lo que sugiere una mejora en la calidad general tras la separación.
+
+![image](https://github.com/user-attachments/assets/a8d5ab78-9ffd-4241-8810-9eb65675e0ac)
+![image](https://github.com/user-attachments/assets/efc7710f-e26f-4a4d-920f-6ce6b0d5738e)
+![image](https://github.com/user-attachments/assets/7dec6c79-0c2a-4a4b-822f-6fb6758d6567)
+
+<p><em>""La imagen presenta el análisis temporal y espectral de las señales capturadas por cada uno de los tres micrófonos."</em></p>
+
+En la parte izquierda de la imagen, se muestran las gráficas del análisis temporal, donde las señales se representan en función del tiempo. Estas gráficas permiten observar la amplitud y variaciones de las señales capturadas, destacando diferencias notables entre los micrófonos. Se observa que el micrófono 3 presenta una señal más estable y con menos fluctuaciones, lo que sugiere una mejor calidad en la captura, en concordancia con su SNR más alto (49.77 dB).
+
+En la parte derecha de la imagen, se muestra el análisis espectral de las mismas señales, donde se representa la amplitud en función de las frecuencias. Estas gráficas espectrales revelan la distribución de la energía de las señales a través de las distintas frecuencias, destacando las componentes dominantes en cada señal. El micrófono 3, nuevamente, muestra una distribución de frecuencias más limpia, mientras que los micrófonos 1 y 2 presentan una mayor dispersión de energía en frecuencias no deseadas, lo que indica la presencia de más ruido.
+
+![image](https://github.com/user-attachments/assets/4dc1a9fa-0f83-4e54-bc07-fe268ca9c99e) <p><em>"Imagen de los espectrogramas de las señales separadas."</em></p>
+
+<p align="center">
+   <img src="https://github.com/user-attachments/assets/f2c059fd-1a98-43a4-bdff-118a8b529e5e" alt="Descripción de la imagen" width="400"> 
+</p>
+<p><em>"Imagen del espectrograma de la voz de referencia."</em></p>
+
+Al observar los espectrogramas de las señales separadas y la señal de referencia. Si bien las señales separadas mostraron una reducción de ruido, todavía se observa cierta contaminación de otras señales no deseadas en las frecuencias más bajas, lo que indica que la separación no fue completamente efectiva en aislar la voz de interés.
+
+La comparación visual de los espectrogramas mostró que, aunque la señal de voz principal se encuentra presente en una de las señales separadas, aún se observan componentes de las otras voces en las señales separadas.
+
+El espectrograma de la voz de referencia muestra una mayor concentración de energía en ciertas bandas de frecuencia, mientras que las señales separadas presentan una dispersión más amplia de energía, indicando que la separación no fue completamente exitosa. Este fenómeno sugiere que las características del ruido y el solapamiento de las voces dificultaron el proceso de separación.
+
+### 4. **Correlación con la Voz de Referencia**
+
+Para evaluar cuantitativamente la similitud entre la voz de referencia y una de las señales separadas, se calculó el coeficiente de correlación de Pearson, obteniendo un valor de -0.0020. Este resultado está lejos de los valores esperados cercanos a 1 (o -1 en caso de una relación inversa), lo que indica que la separación no fue efectiva para aislar la voz de referencia y  que todavía contiene componentes de otras fuentes.
+### 5. **Discusión de los Resultados**
+
+Los resultados muestran que, aunque se logró una mejora en la SNR de las señales separadas, la separación completa de la señal deseada no fue lograda. Esto se refleja tanto en la baja correlación como en la presencia de contaminación de otras señales en el análisis espectral. La razón de esto podría estar relacionada con las condiciones de captura de las señales, tales como la disposición de los micrófonos, la calidad de los mismos, o incluso la naturaleza de las señales originales.
+
+La comparación cualitativa entre los espectrogramas de la señal de referencia y las señales separadas muestra que, aunque se logró una mejora significativa en la calidad de las señales separadas, no se consiguió una separación perfecta. Es posible que ajustes adicionales en el procesamiento de señales o mejoras en la configuración del sistema (mejores micrófonos o una disposición más óptima) puedan llevar a mejores resultados en futuras iteraciones del experimento.
+
+**Conclusión:** La técnica FastICA permitió una mejora en la SNR de las señales, pero no fue suficiente para obtener una separación completa de la señal deseada.
+
 
 # Discusión
 En el siguiente apartado se evidenciará la discusión de los resultados, esto por medio de la interpretación de las gráficas evidenciadas en el índice anterior.
