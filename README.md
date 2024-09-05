@@ -233,7 +233,7 @@ Otro valor a considerar que el filtrado logro eliminar la voz de la 3ra persona,
 # Conclusión
 En el siguiente apartado se presentarán las conclusiones más relevantes de la anterior practica de laboratorio
 
-Los dos factores que afectaron los resultados en torno a la separación de las fuentes fue el uso de diferentes micrófonos y el factor humano al momento de tomar la toma de las señales. Por lo anterior, se concluye que el uso de distintos micrófonos del mismo tipo y por medio de un riguroso software dedicado al procesamiento de audios provenientes de distintas fuentes son unas mejoras que podrían disminuir el error en estas prácticas de laboratorio.
+Los dos factores que afectaron los resultados en la separación de las fuentes fueron el uso de diferentes micrófonos y el factor humano al momento de capturar las señales.Por lo cual, se concluye que el uso de micrófonos del mismo tipo y la implementación de un software especializado en el procesamiento de audios provenientes de diferentes fuentes son mejoras que podrían reducir el error en este tipo de prácticas de laboratorio.
 
 # Referencias
 Citas de libros, artículos o recursos en línea utilizados.
