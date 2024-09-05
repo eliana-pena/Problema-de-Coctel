@@ -30,31 +30,31 @@ Para el desarrollo de esta problemática, se grabó con 3 micrófonos diferentes
 En el desarrollo del laboratorio se usaron las siguientes librerias:
 
 - **NumPy**: `import numpy as np`  
-  Provides support for large, multi-dimensional arrays and matrices, along with a large collection of mathematical functions to operate on these arrays.
+  Proporciona soporte para arreglos y matrices grandes y multidimensionales, junto con una gran colección de funciones matemáticas para operar sobre estos arreglos.
 
 - **SoundFile**: `import soundfile as sf`  
-  Used to read and write sound files, such as WAV files.
+  Se utiliza para leer y escribir archivos de sonido, como archivos WAV.
 
 - **scikit-learn (FastICA)**: `from sklearn.decomposition import FastICA`  
-  Implements the FastICA algorithm for Independent Component Analysis, a technique used to separate mixed signals.
+  Implementa el algoritmo FastICA para el Análisis de Componentes Independientes, una técnica utilizada para separar señales mezcladas.
 
 - **Matplotlib**: `import matplotlib.pyplot as plt`  
-  A plotting library for creating static, animated, and interactive visualizations in Python.
+  Una biblioteca de gráficos para crear visualizaciones estáticas, animadas e interactivas en Python.
 
 - **SciPy (FFT)**: `import scipy.fftpack as fft`  
-  Provides functions for computing the Fast Fourier Transform, which is useful for analyzing the frequency components of signals.
+  Proporciona funciones para calcular la Transformada Rápida de Fourier, útil para analizar los componentes de frecuencia de las señales.
 
-- **Librosa**: `import librosa` and `import librosa.display`  
-  A Python package for music and audio analysis. It provides building blocks to create musical information retrieval systems.
+- **Librosa**: `import librosa` y `import librosa.display`  
+  Un paquete de Python para el análisis de música y audio. Proporciona bloques de construcción para crear sistemas de recuperación de información musical.
 
-- **SciPy (Stats)**: `from scipy.stats import pearsonr`  
-  Used to calculate Pearson correlation coefficients.
+- **SciPy (Estadística)**: `from scipy.stats import pearsonr`  
+  Se utiliza para calcular los coeficientes de correlación de Pearson.
 
 - **SciPy (IO)**: `from scipy.io import wavfile`  
-  Provides functions to read and write WAV files.
+  Proporciona funciones para leer y escribir archivos WAV.
 
-- **SciPy (Signal Processing)**: `from scipy.signal import butter, lfilter`  
-  Provides functions for designing and applying digital filters.
+- **SciPy (Procesamiento de Señales)**: `from scipy.signal import butter, lfilter`  
+  Proporciona funciones para diseñar y aplicar filtros digitales.
 
 ## Desarrollo
 Análisis temporal y frecuencial (15%): Aquí, explica cómo realizaste el análisis en el dominio del tiempo y la frecuencia. Detalla las escalas utilizadas (lineal, logarítmica) y describe cómo estas características se relacionan con el objetivo del experimento.
